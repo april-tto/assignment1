@@ -2,10 +2,11 @@
 import React from 'react';
 import ToDoList from './to-do-list';
 import Welcome from './welcomePage';
+import './index.css'
 
 function NavBarButtons() {
     return (
-        <div>
+        <div className="displayedWindow">
             <div>
                 <Welcome/>
             </div>

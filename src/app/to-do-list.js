@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import RemovedTasksList from './removed-tasks';
 
 function ToDoList() {
+
     const [tasks, setTask] = useState([
         { id: 1, task: "Complete daily tasks!" },
         { id: 2, task: "Do Advanced Front-end assignment" }
@@ -18,31 +19,33 @@ function ToDoList() {
 
     const removeTask = (id) => {
         setTask(tasks.filter((task) => task.id != id));
-        setDeletedTask(deletedTask+1);
+        setDeletedTask(deletedTask + 1);
     }
 
     return (
         <div>
             <section>
-                <h3>To Do:</h3>
+                <h3 className="heading">To Do:</h3>
                 <ul>
                     {tasks.map((task) => (
                         <li key={task.id}>
-                            {task.id}. {task.task}
-                            <button onClick={() => removeTask(task.id)}>remove task</button>
+                            {task.task}
+                            <button onClick={() => removeTask(task.id)} className="taskButton">remove task</button>
                         </li>
                     ))}
                 </ul>
-                <input
-                    type="text"
-                    placeholder="Enter your task"
-                    value={value}
-                    onChange={(e) => setValue(e.target.value)}
-                />
-                <button onClick={addTask}>Post Task</button>
+                <div className="inputField">
+                    <input
+                        type="text"
+                        placeholder="Enter your task"
+                        value={value}
+                        onChange={(e) => setValue(e.target.value)}
+                    />
+                    <button onClick={addTask} className="uploadButton">post task</button>
+                </div>
             </section>
             <section>
-                { (tasks.length === 0) && <RemovedTasksList taskList={deletedTask}/>}
+                {(tasks.length === 0) && <RemovedTasksList taskList={deletedTask} />}
             </section>
         </div>
     )

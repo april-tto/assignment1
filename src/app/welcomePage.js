@@ -1,10 +1,15 @@
 import React from 'react';
 
 function Welcome() {
+
+    const styles = {
+        margin: 'auto',
+        fontSize: '2em',
+    }
     return (
-        <div>
+        <div style={styles}>
             <h1>Welcome!</h1>
-            <h2>Your own task manager</h2>
+            <h3>(Your own task manager)</h3>
         </div>
     );
 }

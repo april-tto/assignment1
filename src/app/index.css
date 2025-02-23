@@ -1,0 +1,96 @@
+body{
+    background-color:darkseagreen;
+    width:100%;
+    height: 100%;
+    padding: none;
+}
+
+* {
+    color:rgb(0, 40, 0);
+}
+
+.displayedWindow{
+    border: 3px solid rgb(0, 40, 0);
+    background-color: rgb(211, 234, 211);
+    margin: auto;
+    width: 70%;
+    height: 70%;
+    border-radius: 3em;
+    padding: 2em 4em;
+}
+
+.heading{
+    background-color: rgb(97, 152, 97);
+    color:azure;
+    border-radius: 5px;
+    padding: 0.5em;
+    border: 3px solid azure;
+    text-align: center;
+}
+
+.taskButton, .uploadButton{
+    padding: 0.5em;
+    background-color: rgb(8, 79, 8);
+    color:azure;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    float: right;
+}
+
+.taskButton:hover{
+    padding: 0.7em;
+    background-color: brown;
+}
+
+.uploadButton:hover{
+    background-color: brown;
+}
+
+li{
+    height: 3em;
+    font-style: oblique;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+input{
+    height: 4.2em;
+    width: 69%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin-left: 0.5em;
+    font-style: oblique;
+    border: none;
+}
+
+.uploadButton{
+    height: 3em;
+    width: 29%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: darkseagreen;
+}
+
+.inputField{
+    background-color: rgb(8, 79, 8);
+    border-radius: 10px;
+    padding: 0.5em;
+}
+
+.result{
+    font-size: 2em;
+    font-style: oblique;
+    font-weight: 600;
+    text-align: center;
+}
+
+.hoverBox{
+    font-size: 4em;
+    border-radius: 20px;
+    background-color: rgb(0, 40, 0);
+    padding: 0.5em;
+}

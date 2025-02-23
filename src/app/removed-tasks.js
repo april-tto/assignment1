@@ -1,13 +1,23 @@
 'use client'
-import React from 'react';
+import React, {useState} from 'react';
 
 function RemovedTasksList(props) {
+
+    const [color, setColor] = useState("rgb(0, 40, 0)");
+
+   const handleOver = () => {
+    setColor("azure")
+   }
+
+   const handleOut = () => {
+    setColor("rgb(0, 40, 0)")
+   }
     return(
-        <div>
+        <div className="result">
             <h3>Hooray! You completed all the tasks</h3>
             <h4>Hover over to see the number of completed tasks :</h4>
-            <p> {props.taskList} </p>
-    </div>
+            <p className="hoverBox" onMouseOver={handleOver} onMouseLeave={handleOut} style={{color: color}}> {props.taskList} </p>
+        </div>
     )
 }
 
