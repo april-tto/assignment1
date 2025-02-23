@@ -3,6 +3,7 @@ import React from 'react';
 import ToDoList from './to-do-list';
 import Welcome from './welcomePage';
 import './index.css'
+//all css code comes from ./index.css file
 
 function NavBarButtons() {
     return (
@@ -25,3 +26,5 @@ export default function Home() {
     )
 
 }
+
+// this is main page with default Home function, where I imported 2 components - ToDoList and Welcome

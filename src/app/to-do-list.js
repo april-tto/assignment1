@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 import RemovedTasksList from './removed-tasks';
 
 function ToDoList() {
-
+//use useState to set an array of object - tasks in the application
     const [tasks, setTask] = useState([
         { id: 1, task: "Complete daily tasks!" },
-        { id: 2, task: "Do Advanced Front-end assignment" }
     ])
-
+//useState for counting deleted tasks
     const [deletedTask, setDeletedTask] = useState(0)
-
+//useState hook for input field
     const [value, setValue] = useState("");
-
+// this to-do list is dynamic - you can add tasks and delete them
     const addTask = () => {
         const NewTask = { id: tasks.length + 1, task: value };
         setTask([...tasks, NewTask]);
@@ -21,7 +20,7 @@ function ToDoList() {
         setTask(tasks.filter((task) => task.id != id));
         setDeletedTask(deletedTask + 1);
     }
-
+// conditionally display another component - Removed Task list
     return (
         <div>
             <section>

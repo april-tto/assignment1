@@ -2,9 +2,9 @@
 import React, {useState} from 'react';
 
 function RemovedTasksList(props) {
-
+// in this component I display number of completed tasks if the user's list is empty
     const [color, setColor] = useState("rgb(0, 40, 0)");
-
+// for styling purposes the number gets displayed if you hover over it
    const handleOver = () => {
     setColor("azure")
    }
