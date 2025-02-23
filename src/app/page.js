@@ -1,7 +1,6 @@
 'use client'
 import React from 'react';
-import { ToDoList, removedTask } from './to-do-list';
-import RemovedTasksList from './removed-tasks';
+import ToDoList from './to-do-list';
 import Welcome from './welcomePage';
 
 function NavBarButtons() {
@@ -12,9 +11,6 @@ function NavBarButtons() {
             </div>
             <div>
                 <ToDoList/>
-            </div>
-            <div>
-                <RemovedTasksList taskList={removedTask}/>
             </div>
         </div>
     )

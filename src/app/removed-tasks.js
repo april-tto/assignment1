@@ -1,30 +1,12 @@
 'use client'
 import React from 'react';
-import PropTypes from 'prop-types';
 
 function RemovedTasksList(props) {
-
-    function displayTasks() {
-
-        const removedTasks = props.taskList
-
-        return (
-            <ul>
-            {removedTasks.map((task) => (
-                <li key={task.id}>
-                    {task.id}. {task.task}
-                    <button>remove task</button>
-                </li>
-            ))}
-        </ul>
-        )
-    }
-
-
     return(
         <div>
-            <h3>Completed Tasks:</h3>
-            <button onClick={displayTasks}>Display</button>
+            <h3>Hooray! You completed all the tasks</h3>
+            <h4>Hover over to see the number of completed tasks :</h4>
+            <p> {props.taskList} </p>
     </div>
     )
 }
